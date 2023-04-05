@@ -1,0 +1,212 @@
+@font-face {
+    font-family: 'Cascadia Code PL';
+    src: url('../fonts/CascadiaCodePL-Regular.eot');
+    src: url('../fonts/CascadiaCodePL-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/CascadiaCodePL-Regular.woff2') format('woff2'),
+    url('../fonts/CascadiaCodePL-Regular.woff') format('woff'),
+    url('../fonts/CascadiaCodePL-Regular.ttf') format('truetype'),
+    url('../fonts/CascadiaCodePL-Regular.svg#CascadiaCodePL-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background-color: #0E1116;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Cascadia Code PL, sans-serif;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 630px;
+}
+
+.big-logo {
+    height: 550px;
+}
+
+.main-window {
+    width: 630px;
+    height: 555px;
+    border: #30363C 1px solid;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+/*__________SEARCH FILED__________*/
+.search-filed {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    margin-top: 28px;
+    font-size: 14px;
+}
+
+.search-filed__input {
+    width: 530px;
+    height: 50px;
+    border-radius: 12px;
+    border: #ffffff 1px solid;
+    background-color: transparent;
+    color: #ffffff;
+    margin-top: 8px;
+    padding-left: 16px;
+    font-family: Cascadia Code PL, sans-serif;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-filed__input:focus {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: #30363C 1px solid;
+}
+
+.autocomplete {
+    display: none;
+}
+
+.search-filed__input:focus + .autocomplete {
+    display: inline;
+    border: #ffffff 1px solid;
+    border-top: none;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin: 0;
+    padding: 8px;
+}
+
+.autocomplete__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: #30363C;
+}
+
+.autocomplete__list-element {
+    margin: 0;
+    padding: 2px 8px;
+}
+
+.autocomplete__list-element:hover {
+    color: #ffffff;
+    background-color: #30363C;
+    border-radius: 8px;
+}
+
+/*__________REPOSITORY__________*/
+.repositories__repository {
+    width: 530px;
+    height: 75px;
+    border: #30363C 1px solid;
+    border-radius: 12px;
+    display: flex;
+    color: white;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.repositories__repository:last-child {
+    margin-bottom: 28px;
+}
+
+.repository__image-logo {
+    width: 55px;
+    height: 55px;
+    margin-left: 16px;
+}
+
+.repository__text {
+    margin-left: 16px;
+}
+
+.repository__button-close-image {
+    width: 50px;
+    height: 50px;
+}
+
+.repository__close-button {
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    margin-left:auto;
+    margin-right: 16px;
+}
+
+.repository__text-name,
+.repository__text-owner,
+.repository__text-stars {
+    margin: 0;
+}
+
+.repository__text-name::before {
+    content: 'Name : ';
+    color: #30363C;
+}
+
+.repository__text-owner::before {
+    content: 'Owner: ';
+    color: #30363C;
+}
+
+.repository__text-stars::before {
+    content: 'Stars: ';
+    color: #30363C;
+}
+
+.button:hover {
+    opacity: 0.8;
+    transform: scale(0.8);
+    transition-duration: 0.5s;
+}
+
+.button:not(:hover){
+    opacity: 1;
+    transform: scale(1);
+    transition-duration: 0.2s;
+}
+
+
+
+
+/*__________OTHER SCREEN__________*/
+@media screen and (max-width: 1200px) {
+    .big-logo {
+        height: 350px;;
+    }
+
+    .main-window {
+        width: 500px;
+    }
+
+    .search-filed__input {
+        width: 400px;
+    }
+
+    .repositories__repository {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .big-logo {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .big-logo {
+        display: none;
+    }
+}
