@@ -76,7 +76,7 @@ async function searchRepository(value) {
     return await fetch(`https://api.github.com/search/repositories?q=${value}`)
         .then(res => {
             if (res.ok) {
-                return res.json().then(res => res)
+                return res.json()
             }
         })
         .catch(err => console.log(err))
