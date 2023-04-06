@@ -93,6 +93,7 @@ function createDivRepository (name, owner, stars) {
     const imageButton = document.createElement('img');
     const divRepositories = document.querySelector('.repositories');
     const linkRepository = document.createElement('a');
+    const firstRepository = document.querySelector('.repositories__repository');
     let urlGitHubRepository = 'https://github.com/';
 
     divRepositoryText.classList.add("repository__text");
@@ -136,7 +137,12 @@ function createDivRepository (name, owner, stars) {
     divRepository.appendChild(divRepositoryText);
     divRepository.appendChild(buttonClose)
 
-    divRepositories.appendChild(divRepository)
+    if (firstRepository) {
+        divRepositories.insertBefore(divRepository, firstRepository)
+    } else {
+        divRepositories.appendChild(divRepository)
+    }
+
 
 }
 
